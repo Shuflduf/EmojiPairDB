@@ -91,17 +91,19 @@
 </script>
 
 <div class="p-4 bg-yellow-50 text-gray-900">
-  <div class="mb-4 flex space-x-4 items-center">
+  <div
+    class="mb-4 flex flex-wrap md:flex-nowrap space-y-4 md:space-y-0 md:space-x-4 items-center"
+  >
     <input
       type="text"
       placeholder="Username"
       bind:value={username}
-      class="p-2 rounded w-auto outline-none bg-yellow-100 focus:outline-yellow-400 shadow-md transition-shadow hover:shadow-lg"
+      class="p-2 rounded w-full md:w-auto outline-none bg-yellow-100 focus:outline-yellow-400 shadow-md transition-shadow hover:shadow-lg"
     />
     <input
       type="text"
       placeholder="Emojis"
-      class="p-2 rounded w-auto outline-none bg-yellow-100 {emojiError
+      class="p-2 rounded w-full md:w-auto outline-none bg-yellow-100 {emojiError
         ? 'outline-red-500'
         : 'focus:outline-yellow-400'} shadow-md transition-shadow hover:shadow-lg"
       bind:value={emojis}
@@ -115,10 +117,10 @@
       type="button"
       value="Add User"
       onclick={submitUser}
-      class="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer shadow-md transition-shadow hover:shadow-lg"
+      class="p-2 bg-blue-500 text-white rounded w-full md:w-auto hover:bg-blue-600 cursor-pointer shadow-md transition-shadow hover:shadow-lg"
     />
     {#if errorMessage}
-      <p class="text-red-500 flex items-center">
+      <p class="text-red-500 flex items-center w-full md:w-auto">
         {errorMessage}
       </p>
     {/if}
@@ -127,12 +129,14 @@
       type="text"
       placeholder="Search"
       bind:value={searchQuery}
-      class="place-self-end p-2 rounded w-auto outline-none bg-yellow-100 focus:outline-yellow-400 shadow-md transition-shadow hover:shadow-lg"
+      class="place-self-end p-2 rounded w-full md:w-auto outline-none bg-yellow-100 focus:outline-yellow-400 shadow-md transition-shadow hover:shadow-lg"
     />
   </div>
 </div>
 
-<div class="max-w-full px-4 grid grid-cols-4 gap-4">
+<div
+  class="max-w-full px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+>
   {#each filteredUsers as user}
     <div
       class="p-4 border rounded shadow-md bg-yellow-100 transition-shadow hover:shadow-lg"
