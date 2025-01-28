@@ -7,7 +7,8 @@
 - Creating a new global entry for everyone to see
 - ONLY two emojis :)
 - Searching for username
+- Mobile UI
 
 # Time
 - Making the actual app: 1 hour
-- DEPLOYING THE APP: 4 hours
+- DEPLOYING THE APP: 5 hours
